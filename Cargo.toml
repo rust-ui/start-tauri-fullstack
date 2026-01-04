@@ -1,0 +1,56 @@
+[workspace]
+resolver = "2"
+members = ["app", "server"]
+
+[workspace.dependencies]
+leptos_ui = "0.3"
+icons = { version = "0.18", features = ["leptos"] }
+
+anyhow = "1"
+axum = { version = "0.8", features = ["macros"] }
+axum-macros = "0.4"
+console_error_panic_hook = "0.1"
+console_log = "1"
+dotenv = "0.15"
+http = "1"
+leptos = { version = "0.8", features = ["nightly"] }
+leptos_axum = "0.8"
+leptos_meta = "0.8"
+leptos_router = { version = "0.8", features = ["nightly"] }
+log = "0.4"
+tw_merge = { version = "0.1", features = ["variant", "debug"]}
+serde = { version = "1", features = ["derive"] }
+struct_field_names = "0.1"
+sqlx = { version = "0.8", features = ["runtime-tokio-rustls", "postgres", "macros", "uuid", "time", "json"] }
+strum = { version = "0.27", features = ["derive"] }
+strum_macros = "0.27"
+thiserror = "2"
+time = { version = "0.3", features = ["serde"] }
+tokio = { version = "1", features = ["rt-multi-thread"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["fs"] }
+tracing = "0.1"
+tracing-log = "0.2"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1", default-features = false, features = ["v4", "v7", "js", "serde"] }
+wasm-bindgen = "0.2"
+web-sys = { version = "0.3", features = ["Storage", "Window", "MediaQueryList"] }
+
+
+
+
+[[workspace.metadata.leptos]]
+name = "start_tauri_fullstack"
+bin-package = "server"
+lib-package = "app"
+site-root = "target/site"
+assets-dir = "public"
+site-pkg-dir = "pkg"
+tailwind-input-file = "style/tailwind.css"
+site-addr = "0.0.0.0:3000"
+reload-port = 3001
+browserquery = "defaults"
+bin-features = []
+bin-default-features = false
+lib-features = ["hydrate"]
+lib-default-features = false
