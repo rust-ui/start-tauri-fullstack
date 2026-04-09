@@ -6,6 +6,16 @@ You need to have Leptos (nightly), Just, Tauri, and PSQL on your machine.
 If not already, you can refer to [PREREQUISITES.md](PREREQUISITES.md).
 
 
+## CLI
+
+```bash
+cargo install ui-cli
+
+ui starters
+# └─> start-tauri-fullstack 
+```
+
+
 ## Setup the project
 
 ```bash
